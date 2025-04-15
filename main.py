@@ -1,4 +1,12 @@
+"""
+@file main.py
+@brief Main entry point of the TODO application.
+
+This file contains the logger configuration and application logic.
+"""
+
 import logging
+
 from todo import add_task, list_tasks, remove_task
 
 # Configure logginggg
