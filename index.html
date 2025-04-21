@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .task-list {
+            margin-top: 20px;
+        }
+        .task-list li {
+            padding: 5px;
+            background-color: #f4f4f4;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>My To-Do List</h1>
+
+<h2>Tasks</h2>
+<ul class="task-list">
+    <!-- Tasks will be listed here -->
+</ul>
+
+<h2>Add New Task</h2>
+<form id="taskForm">
+    <input type="text" id="newTask" placeholder="Enter a new task" required>
+    <button type="submit">Add Task</button>
+</form>
+
+<script>
+    const taskList = document.querySelector('.task-list');
+    const taskForm = document.getElementById('taskForm');
+    const newTaskInput = document.getElementById('newTask');
+
+    // Add task to list
+    taskForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const newTask = newTaskInput.value.trim();
+        if (newTask) {
+            const li = document.createElement('li');
+            li.textContent = newTask;
+            taskList.appendChild(li);
+            newTaskInput.value = '';
+        }
+    });
+</script>
+
+</body>
+</html>
