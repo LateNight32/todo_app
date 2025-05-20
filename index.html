@@ -1,55 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
+    <title>To-Do App Agile პროექტი</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-        }
-        .task-list {
-            margin-top: 20px;
-        }
-        .task-list li {
-            padding: 5px;
+            margin: 40px;
             background-color: #f4f4f4;
-            margin: 5px 0;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        p {
+            font-size: 18px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: auto;
         }
     </style>
 </head>
 <body>
+    <div class="card">
+        <h1>To-Do App Agile პროექტი</h1>
+        <p>ეს არის Python-ით შექმნილი მარტივი კონსოლური To-Do აპლიკაცია, რომელიც იყენებს ლოგირებას და მონაცემების შენახვას JSON ფაილში.</p>
 
-<h1>My To-Do List</h1>
+        <p>პროექტის მართვა განხორციელდა Agile მეთოდით, კონკრეტულად <strong>Kanban</strong> სისტემის გამოყენებით Trello დაფაზე.</p>
 
-<h2>Tasks</h2>
-<ul class="task-list">
-    <!-- Tasks will be listed here -->
-</ul>
+        <p><strong>Trello დაფა:</strong><br>
+        <a href="https://trello.com/invite/b/682ca775932772ec6bb7a684/ATTI2cf06a1ae881ae542f5e15c0efd20028BE0AD60B/to-do-app-kanban" target="_blank">დაათვალიერე Trello Kanban დაფა</a></p>
 
-<h2>Add New Task</h2>
-<form id="taskForm">
-    <input type="text" id="newTask" placeholder="Enter a new task" required>
-    <button type="submit">Add Task</button>
-</form>
-
-<script>
-    const taskList = document.querySelector('.task-list');
-    const taskForm = document.getElementById('taskForm');
-    const newTaskInput = document.getElementById('newTask');
-
-    // Add task to list
-    taskForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-        const newTask = newTaskInput.value.trim();
-        if (newTask) {
-            const li = document.createElement('li');
-            li.textContent = newTask;
-            taskList.appendChild(li);
-            newTaskInput.value = '';
-        }
-    });
-</script>
-
+        <p><strong>GitHub რეპოზიტორია:</strong><br>
+        <a href="https://github.com/LateNight32/todo_app" target="_blank">ნახე პროექტი GitHub-ზე</a></p>
+    </div>
 </body>
 </html>
